@@ -1,0 +1,273 @@
+
+.container {
+    position: absolute;
+    top: 10%;
+    right:auto;
+    left:auto;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around ;
+  }
+  
+  
+  
+  .item { 
+    flex: 1 1 300px; 
+    margin: 10px;
+    position: absolute;
+    background-color: transparent;
+    width: calc(var(--i) * 2.5vmin);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: .9vmin solid rgb(0, 200, 255);
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) translateZ(50px);
+    animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+    box-shadow: 0px 0px 15px rgb(124, 124, 124),
+      inset 0px 0px 15px rgb(124, 124, 124);
+  }
+  
+  @keyframes my-move {
+    0%,
+    100% {
+      transform: rotateX(70deg) translateZ(50px) translateY(0px);
+      filter: hue-rotate(0deg);
+    }
+  
+    50% {
+      transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+      filter: hue-rotate(180deg);
+    }
+  }
+  :root {
+    --primary-color: #292929;
+    --secondary-color: #333;
+    --background-color: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #f4f4f4;
+    line-height: 1.6;
+    background-color: var(--primary-color);
+    padding: 0;}
+    @keyframes stageBackground {
+      0%, 10%, 90%, 100% {
+        background-color: #00B6BB;
+      }
+    
+      25%, 75% {
+        background-color: #0094bd;
+      }
+    }
+    .floor h2{
+      margin-bottom: -4em;
+    }
+    .loader{
+      display: flex;
+      margin: 0 auto 80px auto;
+      justify-content: center;
+      align-items: flex-end;
+      width: 400px;
+      height: 300px;
+      position: relative;
+      margin-bottom: 15em;
+    }
+    /* Default state */
+.pre-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #292929;
+  z-index: 9999; /* Ensure it’s on top of the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* After loading */
+.hidden {
+  display: none;
+}
+
+/* Loader animation and hidden content */
+#content.hidden {
+  display: none;
+  opacity: 0;
+}
+
+
+.main-header {
+    background-color: var(--secondary-color);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    color: var(--background-color);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: #f4f4f4;
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--background-color);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.subordinate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-member, .subordinate-member {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member:hover, .subordinate-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(77, 186, 210, 0.5);
+}
+
+img {
+    width: 160px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.member-details {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.member-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+}
+
+.member-details p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: #f4f4f4;
+}
+
+footer a {
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1148px) {
+    .subordinate-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.load h2{
+    margin-bottom: -6em;}
+    
+
+@media (max-width: 768px) {
+    .team-member, .subordinate-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member-details {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .subordinate-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header h1 {
+        font-size: 2em;
+    }
+
+    .hero-section h2 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .team-grid, .subordinate-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.logo {
+    width: 64px;
+    height: 64px;
+    padding-left: 0;
+    object-fit: cover;
+}

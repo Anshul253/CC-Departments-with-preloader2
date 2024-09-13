@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="preloader" class="pre-loader">
+    <div class="container">
+        <div class="item" style="--i:0;"></div>
+        <div class="item" style="--i:1;"></div>
+        <div class="item" style="--i:2;"></div>
+        <div class="item" style="--i:3;"></div>
+        <div class="item" style="--i:4;"></div>
+        <div class="item" style="--i:5;"></div>
+        <div class="item" style="--i:6;"></div>
+        <div class="item" style="--i:7;"></div>
+        <div class="item" style="--i:8;"></div>
+        <div class="item" style="--i:9;"></div>
+        <div class="item" style="--i:10;"></div>
+        <div class="item" style="--i:11;"></div>
+        <div class="item" style="--i:12;"></div>
+        <div class="item" style="--i:13;"></div>
+        <div class="item" style="--i:14;"></div>
+        <div class="item" style="--i:15;"></div>
+        <div class="item" style="--i:16;"></div>
+        <div class="item" style="--i:17;"></div>
+        <div class="item" style="--i:18;"></div>
+        <div class="item" style="--i:19;"></div>
+        <div class="item" style="--i:20;"></div>
+        <div class="load">
+            <h2>Loading...</h2>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="hidden">
+    <header class="main-header">
+        <h1>C<>ding Club</h1>
+        <img src="logo2.png" alt="Coding Club Logo" class="logo">
+    </header>
+
+    <section class="hero-section">
+        <h2>Web Development</h2>
+        <p>Empowering innovation and creativity through collaboration.</p>
+    </section>
+
+    <section class="members-section">
+        <h2>Department Cores</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="member1.jpg" alt="Member 1">
+                <div class="member-details">
+                    <h3>Lavesh Patil</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="member1.jpg" alt="Member 2">
+                <div class="member-details">
+                    <h3>Utkarsha Dhok</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subordinates-section">
+        <h2>Sub-cores</h2>
+        <div class="subordinate-grid">
+            <div class="subordinate-member">
+                <img src="member1.jpg" alt="Subordinate 1">
+                <div class="member-details">
+                    <h3>Subordinate 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="subordinate-member">
+                <img src="member1.jpg" alt="Subordinate 2">
+                <div class="member-details">
+                    <h3>Subordinate 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="subordinate-member">
+                <img src="member1.jpg" alt="Subordinate 3">
+                <div class="member-details">
+                    <h3>Subordinate 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <!-- Additional Subordinates -->
+            <div class="subordinate-member">
+                <img src="member1.jpg" alt="Subordinate 4">
+                <div class="member-details">
+                    <h3>Subordinate 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="subordinate-member">
+                <img src="member1.jpg" alt="Subordinate 5">
+                <div class="member-details">
+                    <h3>Subordinate 5</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="subordinate-member">
+                <img src="member1.jpg" alt="Subordinate 6">
+                <div class="member-details">
+                    <h3>Subordinate 6</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+    <footer>
+        <p>&copy; 2024 Coding Club.</p>
+    </footer>
+  
+    <script>
+      
+      window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    if (preloader && content) {
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            content.classList.remove('hidden');
+            document.body.style.overflow = 'auto'; // Allow scrolling after the preloader
+        }, 3822); // Adjust the delay if needed
+    } else {
+        console.error('Preloader or content element not found');
+    }
+});
+
+  </script>
+</body>
+</html>
